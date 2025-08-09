@@ -1,5 +1,9 @@
 import requests
 
+import testnet3_config
+
+# 配置 - 请替换以下值
+TRANSACTION_ID = testnet3_config.config['transaction_id']
 
 def get_transaction_details(txid, testnet=False):
     """
@@ -29,7 +33,7 @@ def get_transaction_details(txid, testnet=False):
 # 示例用法
 if __name__ == "__main__":
     # 替换为你要查询的交易ID（测试网示例）
-    txid = "3e0140ba728c64b04de9746fe79d6df26cb1c9a135a872bd41d3cec6453da899"
+    txid = TRANSACTION_ID
 
     # 查询交易详情 (主网)
     details = get_transaction_details(txid, True)
